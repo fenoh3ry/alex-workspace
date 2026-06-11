@@ -8,7 +8,7 @@ import Navigation from "@/components/global/navigation/Navigation.astro";
 // Hides nav and footer on selected screens by passing
 // the hideNav and hideFooter props
 // <BaseLayout hideNav={true} hideFooter={true}>
-const { hideNav = false, hideFooter = false } = Astro.props;
+const { hideNav = false, hideFooter = false, title, description } = Astro.props;
 import ToggleLocalStorage from "@/components/fundations/scripts/ToggleLocalStorage.astro";
 ---
 
@@ -16,6 +16,8 @@ import ToggleLocalStorage from "@/components/fundations/scripts/ToggleLocalStora
 <html lang="en" class="scroll-smooth">
   <head>
     <BaseHead />
+    {title && <title>{title}</title>}
+    {description && <meta name="description" content={description} />}
   </head>
   <body class="flex flex-col bg-white dark:bg-base-900 min-h-svh">
     {!hideNav && <Navigation />}

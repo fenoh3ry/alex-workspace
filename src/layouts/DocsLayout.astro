@@ -5,9 +5,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Sidebar from "@/components/global/navigation/Sidebar.astro";
 import MobileTopBar from "@/components/global/navigation/MobileTopBar.astro";
 import DesktopTopBar from "@/components/global/navigation/DesktopTopBar.astro";
+
+const { title, description } = Astro.props;
 ---
 
-<BaseLayout hideNav={true} hideFooter={true}>
+<BaseLayout title={title} description={description} hideNav={true} hideFooter={true}>
   <div class="min-h-screen bg-base-100 dark:bg-base-700">
     <!-- Mobile header -->
     <div class="bg-base-100 dark:bg-base-700">
