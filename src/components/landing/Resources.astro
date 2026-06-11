@@ -6,30 +6,31 @@ import ChevronRight from "@/components/fundations/icons/ChevronRight.astro";
 
 const resources = [
   {
-    id: "support",
-    title: "Support",
-    description: "Browse our FAQs or get direct help from our support team.",
-    href: "/docs/help/faq",
-  },
-  {
-    id: "community",
-    title: "Community",
+    id: "dev",
+    title: "Développement",
     description:
-      "Join our Discord and forums to connect with other developers.",
-    href: "#_",
+      "Prototypes et synthèses réglementation STN (stratégie nationale de transformation).",
+    href: "/docs/developpement/prototype-A-reglementation-stn",
   },
   {
-    id: "tutorials",
-    title: "Tutorials",
+    id: "culture",
+    title: "Culture",
     description:
-      "Hands-on tutorials to guide you through core features and patterns.",
-    href: "/blog/",
+      "Approche culturelle en politique comparée — sources et analyses.",
+    href: "/docs/culture/sources-culturelles",
   },
   {
-    id: "integrations",
-    title: "Integrations",
-    description: "Explore popular tools and third-party integrations.",
-    href: "/integrations",
+    id: "dip-malagasy",
+    title: "DIP Malagasy",
+    description:
+      "Droit international privé malagasy — cours et extraits.",
+    href: "/docs/droit-international-prive/dip-malagasy",
+  },
+  {
+    id: "eiti",
+    title: "EITI Madagascar",
+    description: "Rapports EITI et audits liés à la gouvernance minière.",
+    href: "/docs/sujet-minier/eiti-rapport-assoupli-2019-2020",
   },
 ];
 ---
@@ -43,15 +44,14 @@ const resources = [
         variant="textLG"
         class="mt-auto font-medium text-base-900 dark:text-white"
       >
-        Resources
+        Autres ressources
       </Text>
       <Text
         tag="p"
         variant="textSM"
         class="mt-4 text-base-500 dark:text-base-300 leading-6 text-balance"
       >
-        Find the help you need to succeed with your project — from support and
-        tutorials to community and third-party integrations.
+        Documents complémentaires — développements, culture, sources primaires et rapports EITI.
       </Text>
     </div>
     <div
@@ -77,7 +77,7 @@ const resources = [
               class="flex items-center text-sm  text-accent-600 hover:text-accent-500 dark:text-accent-400 gap-2 group"
               aria-label={`${item.title}: ${item.description}`}
             >
-              Explore
+              Explorer
               <ChevronRight
                 size="sm"
                 class="group-hover:translate-x-2 duration-300"

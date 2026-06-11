@@ -3,12 +3,13 @@
 // Fundations
 import Header from "@/components/fundations/containers/Header.astro";
 import Button from "@/components/fundations/elements/Button.astro";
+
 ---
 
 <section class="bg-base-100 dark:bg-base-700">
   <Header
-    title="Astro JS Documentation"
-    description="Leverage the Astro JS API to access components, pages, server-side features, and more—making it easy to integrate your project into the workflows of countless dedicated Astro developers."
+    title="Alex Workspace"
+    description="Documents, fiches synthétiques et notes de cours — sociologie politique, droit international privé, droit du commerce international, gouvernance minière et plus."
     innerClass="pt-24 "
   >
     <div class="flex flex-wrap items-center w-full mt-8 just gap-2">
@@ -16,10 +17,13 @@ import Button from "@/components/fundations/elements/Button.astro";
         isLink={true}
         size="xs"
         variant="accent"
-        href="/docs/getting-started/introduction">Get started</Button
+        href="/docs/droit-international-prive/methode-savignienne">Droit international privé</Button
       >
-      <Button isLink={true} size="xs" variant="muted" href="/docs/api/overview"
-        >Astro Features</Button
+      <Button isLink={true} size="xs" variant="muted" href="/docs/sociologie-politique/synthese-chap12-section1"
+        >Sociologie politique</Button
+      >
+      <Button isLink={true} size="xs" variant="muted" href="/docs/sujet-minier/analyse-croisee-gouvernance-miniere-madagascar"
+        >Sujet minier</Button
       >
     </div>
   </Header>

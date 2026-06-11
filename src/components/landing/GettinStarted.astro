@@ -4,27 +4,27 @@ import Text from "@/components/fundations/elements/Text.astro";
 import ChevronRight from "@/components/fundations/icons/ChevronRight.astro";
 const features = [
   {
-    title: "Quick Start",
-    description: "Get up and running in minutes with our step-by-step guide",
-    href: "/docs/getting-started/quick-start",
+    title: "Droit international privé",
+    description: "Méthode savignienne, arrêts Bartholo et Wagons-Lits, cours Clavel, DIP malagasy",
+    href: "/docs/droit-international-prive/methode-savignienne",
   },
   {
-    title: "API Reference",
-    description: "Complete reference for all endpoints and methods",
-    href: "/docs/api/overview",
-    cta: "Explore API ",
+    title: "Droit du commerce international",
+    description: "Fiches synthétiques DCI, Mémento DALLOZ complet",
+    href: "/docs/droit-commerce-international/fiche-synthetique-dci",
+    cta: "Voir les fiches ",
   },
   {
-    title: "Guides",
-    description: "In-depth guides for advanced configurations",
-    href: "/docs/guides/configuration",
-    cta: "Read guides ",
+    title: "Sociologie politique",
+    description: "Synthèses Braud — chapitre 12, élaboration du discours scientifique",
+    href: "/docs/sociologie-politique/synthese-chap12-section1",
+    cta: "Lire les synthèses ",
   },
   {
-    title: "Support",
-    description: "Get help when you need it most",
-    href: "/docs/help/faq",
-    cta: "Get help ",
+    title: "Sujet minier",
+    description: "Gouvernance minière, EITI, audits QMM, pollution Madena et Rio Tinto",
+    href: "/docs/sujet-minier/analyse-croisee-gouvernance-miniere-madagascar",
+    cta: "Explorer ",
   },
 ];
 ---
@@ -38,18 +38,14 @@ const features = [
         variant="textLG"
         class="mt-auto font-medium text-base-900 dark:text-white"
       >
-        Getting started
+        Matières
       </Text>
       <Text
         tag="p"
         variant="textSM"
         class="mt-4 text-base-500 dark:text-base-300 leading-6 text-pretty"
       >
-        Get started by scaffolding a new Astro project or adding docs to an
-        existing site. You can write pages in Markdown or MDX, customize layouts
-        with Tailwind CSS, and extend functionality with Astro integrations.
-        When you’re ready, deploy anywhere — Astro works great with static hosts
-        and edge platforms.
+        Tous les documents et fiches de cours organisés par matière. Cliquez sur une matière pour accéder au contenu complet.
       </Text>
     </div>
     <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -78,7 +74,7 @@ const features = [
                 class="flex items-center mt-8 text-sm text-accent-600 hover:text-accent-500 dark:text-accent-400 gap-2 group"
                 aria-label={`${feature.title}: ${feature.description}`}
               >
-                Read further
+                {feature.cta || "Lire "}
                 <ChevronRight
                   size="sm"
                   class="group-hover:translate-x-2 duration-300"

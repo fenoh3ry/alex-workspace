@@ -8,27 +8,24 @@ import SidebarLinks from "@/components/global/navigation/SidebarLinks.astro";
 // Scripts
 import MobileMenuScript from "@/components/fundations/scripts/MobileMenuScript.astro";
 
-const staticLinks = [
-  { href: "/integrations", title: "Integrations" },
-  { href: "/changelog", title: "Changelog" },
-  { href: "/infopages/licensing", title: "Licensing" },
-];
+const staticLinks: Array<{ href: string; title: string }> = [];
 
 // Get all docs and group by category
 import { getCollection } from "astro:content";
 const allDocs = await getCollection("docs");
 
-// Define category display names and order - ONLY include categories you want
-const categoryConfig = {
-  "getting-started": { name: "Getting Started", order: 1 },
-  navigation: { name: "Navigaton", order: 2 },
-  components: { name: "Components", order: 3 },
-  shiki: { name: "Shiki", order: 4 },
-  help: { name: "Help & Support", order: 5 },
+// Define category display names and order — Alex's subjects
+const categoryConfig: Record<string, { name: string; order: number }> = {
+  "droit-international-prive": { name: "Droit international privé", order: 1 },
+  "droit-commerce-international": { name: "Droit du commerce international", order: 2 },
+  "sociologie-politique": { name: "Sociologie politique", order: 3 },
+  "sujet-minier": { name: "Sujet minier", order: 4 },
+  developpement: { name: "Développement", order: 5 },
+  culture: { name: "Culture", order: 6 },
 };
 
 // Group all docs first, then filter
-const allGroupedDocs = allDocs.reduce(
+const allGroupedDocs: Record<string, Array<{ slug: string; title: string; order: number }>> = allDocs.reduce(
   (acc, doc) => {
     const category = doc.data.category;
     if (!acc[category]) {
@@ -45,7 +42,7 @@ const allGroupedDocs = allDocs.reduce(
 );
 
 // Filter to only include configured categories
-const groupedDocs = Object.keys(allGroupedDocs)
+const groupedDocs: Record<string, Array<{ slug: string; title: string; order: number }>> = Object.keys(allGroupedDocs)
   .filter((category) => categoryConfig[category])
   .reduce(
     (acc, category) => {
@@ -90,7 +87,7 @@ const currentPath = Astro.url.pathname;
         class="flex items-center space-x-2 text-base-900 dark:text-white"
       >
         <Logo class="size-4" />
-        <span class="text-lg font-semibold">ZeroIndex</span>
+        <span class="text-lg font-semibold">Alex Workspace</span>
       </a>
       <button
         id="sidebar-close"
@@ -107,7 +104,8 @@ const currentPath = Astro.url.pathname;
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"></path>
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
         </svg>
       </button>
     </div>
@@ -145,19 +143,6 @@ const currentPath = Astro.url.pathname;
         })
       }
     </nav>
-
-    <div
-      class="relative px-6 py-4 border-t border-base-200 dark:border-base-800"
-    >
-      <Button
-        isLink={true}
-        size="sm"
-        variant="muted"
-        href="https://buy.polar.sh/polar_cl_MOD8VbnH7TZZ58sMoFCNmoJeM1mV2DeU53Jsw1NBrY6"
-      >
-        Buy ZeroIndex
-      </Button>
-    </div>
   </div>
 </aside>
 
