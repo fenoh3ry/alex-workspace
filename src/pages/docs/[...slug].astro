@@ -146,6 +146,20 @@ const formatDate = (date: Date) => {
             />
             Edit on GitHub</a
           >
+          {doc.data.pdf && (
+            <a
+              href={doc.data.pdf}
+              download
+              class="text-base-900 dark:text-white hover:text-accent-600 flex items-center w-full gap-2 text-xs text-left"
+            >
+              <ArrowDownright
+                slot="icon"
+                size="sm"
+                class="text-base-900 dark:text-white"
+              />
+              Télécharger le PDF</a
+            >
+          )}
           <div id="feedback-buttons" class="flex items-center gap-2">
             <span class="text-base-500 dark:text-base-400 text-xs">
               Was this helpful?</span

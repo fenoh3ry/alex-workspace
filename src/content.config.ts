@@ -37,6 +37,7 @@ const docs = defineCollection({
     category: z.string(),
     order: z.number().optional(),
     lastUpdated: z.coerce.date().optional(),
+    pdf: z.string().optional(),
   }),
 });
 
