@@ -6,6 +6,12 @@ order: 2
 lastUpdated: 2026-06-17
 ---
 
+<div style="margin-bottom: 24px; text-align: center;">
+  <a href="/documents/rapport-de-stage-partie-ii.pdf" download style="display: inline-block; padding: 12px 28px; background-color: #2563eb; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px;">
+    📄 Télécharger le PDF
+  </a>
+</div>
+
 # Partie II — L'IA générative dans la recherche scientifique : assistant intellectuel légitime ou menace pour l'autonomie du chercheur ?
 
 > Retour d'expérience sur six mois de stage chez Fataplus SARLU et observation croisée de deux régimes d'usage d'un agent IA.
